@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人网站</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">夜灵AI</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">首页</a></li>
+                <li><a href="#about">夜灵AI</a></li>
+                <li><a href="#chat">AI对话</a></li>
+                <li><a href="#skills">技能</a></li>
+                <li><a href="#portfolio">作品集</a></li>
+                <li><a href="#footer">关于我们</a></li>
+                <li><a href="http://aigc.yelingai.top/" target="_blank" class="external-link">
+                    <i class="fas fa-external-link-alt"></i> AIGC主页
+                </a></li>
+                <li><a href="http://bk.yelingai.top/" target="_blank" class="external-link">
+                    <i class="fas fa-users"></i> 用户论坛
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 首页轮播 -->
+    <section id="home">
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide active">
+                    <img src="imgs/webp.webp.jpg" alt="轮播图1">
+                </div>
+                <div class="slide">
+                    <img src="imgs/webp.webp (1).jpg" alt="轮播图2">
+                </div>
+                <div class="slide">
+                    <img src="imgs/webp.webp (2).jpg" alt="轮播图3">
+                </div>
+                <div class="slide">
+                    <img src="imgs/webp.webp (3).jpg" alt="轮播图4">
+                </div>
+                <div class="slide">
+                    <img src="imgs/webp.webp.jpg" alt="轮播图5">
+                </div>
+            </div>
+            <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
+            <div class="slider-dots"></div>
+            
+            <!-- 轮播文字区域移到这里 -->
+            <div class="slider-captions">
+                <div class="caption active">
+                    <h1>创新•专注•热爱</h1>
+                    <p>用创意连接世界，用技术改变生活</p>
+                </div>
+                <div class="caption">
+                    <h1>设计•开发•创造</h1>
+                    <p>让每个项目都成为艺术品</p>
+                </div>
+                <div class="caption">
+                    <h1>思考•实践•分享</h1>
+                    <p>在学习中成长，在分享中进步</p>
+                </div>
+                <div class="caption">
+                    <h1>智能•创新•未来</h1>
+                    <p>用AI技术开启无限可能</p>
+                </div>
+                <div class="caption">
+                    <h1>探索•突破•超越</h1>
+                    <p>不断追求技术与艺术的完美融合</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我 -->
+    <section id="about">
+        <div class="section-container">
+            <div class="about-wrapper">
+                <div class="about-image">
+                    <img src="imgs/geren.jpg" alt="个人照片">
+                </div>
+                <div class="about-content">
+                    <h2>夜灵AI</h2>
+                    <p>你好，我是一名充满热情的创作者。我专注于将创意想法转化为现实，善于运用技术解决问题。</p>
+                    <p>在过去的几年里，我参与过多个创新项目，积累了丰富的实践经验。我相信，优秀的设计源于对细节的专注和对用户的理解。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI对话模块移到这里 -->
+    <section id="chat">
+        <div class="section-container">
+            <h2 class="section-title">AI助手</h2>
+            <div class="chat-container">
+                <aside class="sidebar">
+                    <button class="new-chat-btn">
+                        <i class="fas fa-plus"></i> 新建对话
+                    </button>
+                    <div class="history-list">
+                        <div class="history-item active">
+                            <i class="fas fa-message"></i>
+                            <span>AI助手对话</span>
+                        </div>
+                        <div class="history-item">
+                            <i class="fas fa-message"></i>
+                            <span>图像生成</span>
+                        </div>
+                        <div class="history-item">
+                            <i class="fas fa-message"></i>
+                            <span>代码助手</span>
+                        </div>
+                    </div>
+                </aside>
+
+                <main class="chat-main">
+                    <div class="chat-header">
+                        <h3>AI助手对话</h3>
+                        <div class="header-actions">
+                            <button class="clear-btn" title="清空对话">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="messages-container">
+                        <div class="message ai-message">
+                            <div class="avatar">AI</div>
+                            <div class="message-content">
+                                <p>你好！我是夜灵AI助手，很高兴为你服务。请问有什么我可以帮助你的吗？</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-container">
+                        <textarea 
+                            class="message-input" 
+                            placeholder="输入你的问题..." 
+                            rows="1"
+                        ></textarea>
+                        <button class="send-btn" title="发送">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技能展示 -->
+    <section id="skills">
+        <div class="section-container">
+            <h2>专业技能</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fas fa-camera"></i>
+                    <h3>AI写真</h3>
+                    <p>专业的AI人像写真生成，打造完美个人写真集</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>AI卡通</h3>
+                    <p>将真实照片转换为精美卡通风格，创造独特艺术效果</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-user-circle"></i>
+                    <h3>AI换脸</h3>
+                    <p>智能人像换脸技术，实现有趣的视觉效果</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-image"></i>
+                    <h3>AI壁纸</h3>
+                    <p>生成高质量个性化壁纸，满足多样化创意需求</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-palette"></i>
+                    <h3>AI油画</h3>
+                    <p>将照片转换为独特的油画风格，展现艺术魅力</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-trademark"></i>
+                    <h3>AI标志</h3>
+                    <p>智能生成专业品牌标志，打造独特品牌形象</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-ad"></i>
+                    <h3>AI海报</h3>
+                    <p>创意海报设计生成，满足各类宣传需求</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-film"></i>
+                    <h3>AI视频转动画</h3>
+                    <p>将普通视频转换为精美动画效果，创造独特视觉体验</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 修改作品集部分 -->
+    <section id="portfolio">
+        <div class="section-container">
+            <h2 class="section-title">作品展示</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="imgs/zuopin (1).jpg" alt="作品1">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>作品1</h3>
+                                <p>AI智能创作</p>
+                                <a href="#" class="view-project">查看详情</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="imgs/zuopin (2).jpg" alt="作品2">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>作品2</h3>
+                                <p>AI智能创作</p>
+                                <a href="#" class="view-project">查看详情</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="imgs/zuopin (3).jpg" alt="作品3">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>作品3</h3>
+                                <p>AI智能创作</p>
+                                <a href="#" class="view-project">查看详情</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 修改页脚部分 -->
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>关于我们</h3>
+                    <p>夜灵AI致力于为用户提供优质的AI服务，包括智能对话、图像生成、代码助手等多个领域。</p>
+                </div>
+                <div class="footer-section">
+                    <h3>联系方式</h3>
+                    <p><i class="fas fa-envelope"></i> Email: 527281730@qq.com</p>
+                    <p><i class="fab fa-weixin"></i> 微信公众号：夜灵AI魔法师</p>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="https://space.bilibili.com/1454465647?spm_id_from=333.1007.0.0" target="_blank" class="bilibili">
+                    <i class="fab fa-bilibili"></i>
+                    哔哩哔哩
+                </a>
+                <a href="https://www.douyin.com/user/self?from_tab_name=main" target="_blank" class="douyin">
+                    <i class="fab fa-tiktok"></i>
+                    抖音
+                </a>
+                <a href="https://weibo.com/u/7912625475" target="_blank" class="weibo">
+                    <i class="fab fa-weibo"></i>
+                    微博
+                </a>
+                <a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=Mzg4NTY4NzY0Mg==" target="_blank" class="wechat">
+                    <i class="fab fa-weixin"></i>
+                    微信
+                </a>
+                <a href="https://www.kuaishou.com/profile/3xsq6gt6uu8zav6" target="_blank" class="kuaishou">
+                    <i class="fas fa-play-circle"></i>
+                    快手
+                </a>
+                <a href="https://www.xiaohongshu.com/user/profile/61d9694b000000001000f30c" target="_blank" class="xiaohongshu">
+                    <i class="fas fa-book"></i>
+                    小红书
+                </a>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2024 夜灵AI. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">隐私政策</a>
+                    <a href="#">使用条款</a>
+                    <a href="#">帮助中心</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
